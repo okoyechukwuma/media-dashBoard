@@ -1,0 +1,381 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    scroll-behavior: smooth;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+:root{
+    --background: hsl(230, 17%, 14%);
+    --top-background : hsl(232, 19%, 15%);
+    --card-background: hsl(228, 28%, 20%);
+    --light-dark-text: hsl(228, 34%, 66%);
+    --light-text: hsl(0, 0%, 100%);
+    --toggle-background: linear-gradient(to right, hsl(210, 78%, 56%), hsl(146, 68%, 55%));
+}
+
+.white-theme{
+    --background: hsl(0, 0%, 100%);
+    --top-background : hsl(225, 100%, 98%);
+    --card-background: hsl(227, 47%, 96%);
+    --light-dark-text: hsl(228, 12%, 44%);
+    --light-text: hsl(230, 17%, 14%);
+    --toggle-background: hsl(230, 22%, 74%);
+}
+
+body{
+    background: var(--background);
+    font-family: 'Inter', sans-serif;
+}
+
+.top-color{
+    background: var(--top-background);
+    width: 100%;
+    height: 18rem;
+    position: absolute;
+    top: 0;
+    z-index: -1;
+}
+
+.container{
+    width: 75%;
+    margin: auto;
+    margin-top: 1.5rem;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem;
+}
+
+.dash{
+    font-size: 2rem;
+    font-weight: 500;
+    color: var(--light-text);
+}
+
+.follower{
+    margin-top: .5rem;
+    font-size: 1.1rem;
+    color: var(--light-dark-text);
+}
+
+.toggle{
+    display: flex;
+    align-items: center;
+}
+
+.toggle-name{
+    margin-right: .5rem;
+    font-size: 1.1rem;
+    color: var(--light-dark-text);
+}
+
+.toggler{
+    width: 3.5rem;
+    height: 1.7rem;
+    position: relative;
+}
+
+.toggle-box{
+    width: 100%;
+    height: 100%;
+    border-radius: .8rem;
+    background: var(--toggle-background);
+}
+
+.toggle-round{
+    position: absolute;
+    margin: .2rem;
+    top: 0;
+    left: 0;
+    width: 1.3rem;
+    height: 1.3rem;
+    background: var(--top-background);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: margin-left .3s linear;
+}
+
+.toggle-change{
+    margin-left: 2rem;
+}
+
+.card-container{
+    width: 100%;
+    padding: 1.5rem;
+    display: flex;
+    /* margin-top: 1rem; */
+}
+
+.card{
+    width: 24%;
+    background: var(--card-background);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1.8rem;
+    border-radius: .5rem;
+}
+
+.card:nth-of-type(1){
+    border-top: .3rem solid hsl(208, 92%, 53%);
+}
+
+.card:nth-of-type(2){
+    margin: 0 2.7%;
+    border-top: .3rem solid hsl(203, 89%, 53%);
+}
+
+.card:nth-of-type(3){
+    border: .3rem solid;
+    border-image-source: linear-gradient(to right, hsl(37, 97%, 70%), hsl(329, 70%, 58%));
+    border-image-slice: 1;
+    border-left: 0 solid;
+    border-bottom: 0 solid;
+    border-right: 0 solid;
+}
+
+.card:nth-of-type(4){
+    margin-left: 2.7%;
+    border-top: .3rem solid hsl(348, 97%, 39%);
+}
+
+.user{
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.user i{
+    font-size: 2rem;
+    margin-right: 1rem;
+}
+
+.user .name{
+    font-size: 1rem;
+    color: var(--light-dark-text);
+}
+
+.numbers{
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: var(--light-text);
+    text-align: center;
+}
+
+.fellow{
+    font-size: 1rem;
+    letter-spacing: .3rem;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.date{
+    margin-top: 2rem;
+    display: flex;
+    color: hsl(163, 72%, 41%);
+}
+
+.fa-sort-up{
+    font-size: 1rem;
+    margin-right: .5rem;
+   margin-top: .3rem;
+}
+
+.fa-sort-down{
+    color: hsl(356, 69%, 56%);
+    margin-right: .5rem;
+}
+
+.day{
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.day.down{
+    color: hsl(356, 69%, 56%);
+}
+
+.fa-facebook-square{
+    color: hsl(208, 92%, 53%);
+}
+
+.fa-twitter{
+    color: hsl(203, 89%, 53%);
+}
+
+.user img{
+     margin-right: 1rem;
+}
+
+.fa-youtube{
+    background: hsl(348, 97%, 39%);
+    border-radius: 50%;
+    padding: .5rem;
+}
+
+.sec-title{
+    padding: 1.5rem;
+    color: var(--light-text);
+    font-size: 2rem;
+    margin-top: .5rem;
+    font-weight: 500;
+}
+
+.second-container{
+    display: grid;
+    grid-template-columns: repeat(4, 23%);
+    width: 100%;
+    padding: 1.5rem;
+    grid-gap: 2.5%;
+}
+
+.second-card{
+    background: var(--card-background);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    border-radius: .5rem;
+    margin-bottom: 1.7rem;
+}
+
+.page{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.veiws{
+    font-size: 1rem;
+    color: var(--light-dark-text);
+}
+
+.page img{
+    width: 1.5rem;
+}
+
+.percentage{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1rem;
+    width: 100%;
+}
+
+.num{
+    font-size: 2.5rem;
+    color: var(--light-text);
+    font-weight: 700;
+}
+
+.per{
+    display: flex;
+    align-items: center;
+    color: hsl(163, 72%, 41%);
+    font-weight: 700;
+}
+
+.per img{
+    margin-right: .5rem;
+}
+
+.per-down{
+    margin-top: .5rem;
+}
+
+.per .red{
+    color: hsl(356, 69%, 56%);
+}
+
+.scroll-up{
+    position: fixed;
+    right: -5rem;
+    bottom: 4rem;
+    /* display: none; */
+    transition: right .4s linear;
+}
+
+.scroll-up a i{
+    font-size: 2.5rem;
+    color: var(--light-dark-text);
+}
+
+.scroll-up-display{
+    right: 2rem;
+}
+
+.attribution {
+     font-size: 11px; 
+     text-align: center;
+ }
+
+.attribution a {
+     color: hsl(228, 45%, 44%);
+ }
+
+ @media(max-width: 790px){
+    .card-container{
+        display: grid;
+        grid-template-columns: repeat(2, 48%);
+        grid-gap: 4%;
+    }
+
+    .card{
+        width: 100%;
+    }
+
+    .second-container{
+        grid-template-columns: repeat(2, 48%);
+        grid-column-gap: 2.5rem;
+    }
+
+    .attribution{
+        margin-top: 1rem;
+    }
+ }
+
+ @media(max-width: 550px){
+    .card-container{
+        grid-template-columns: 1fr;
+        grid-row-gap: 2rem;
+    }
+
+    .header{
+        flex-direction: column;
+    }
+
+    .title{
+        margin-bottom: 1rem;
+       margin-right: auto;
+    }
+
+    .toggle{
+        width: 100%;
+        margin-top: 1rem;
+        justify-content: space-between;
+    }
+
+    .second-container{
+        grid-template-columns: 1fr;
+        grid-row-gap: 0;
+    }
+
+    .card:nth-of-type(2),
+    .card:nth-of-type(4){
+        margin: 0;
+    }
+    
+ }
